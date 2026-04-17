@@ -1,0 +1,22 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "mps",
+  "base_params_B": 1.544,
+  "lora_trainable_params": 544768,
+  "head_trainable_params": 1536,
+  "total_trainable_pct": 0.0354,
+  "lora_rank": 4,
+  "n_train": 200,
+  "n_eval": 40,
+  "n_steps": 350,
+  "lr_lora": 0.0002,
+  "lr_head": 0.001,
+  "final_loss": 0.0,
+  "final_reward_margin": 12.3163,
+  "mean_reward_chosen": 2.2629,
+  "mean_reward_rejected": 0.4291,
+  "reward_gap": 1.8338,
+  "final_preference_accuracy": 0.625,
+  "training_minutes": 7.8,
+  "portfolio_note": "Stage 2 of the classical RLHF pipeline (Christiano 2017 / InstructGPT). Trains an explicit scalar reward model with Bradley-Terry loss, which would drive PPO in stage 3. DPO collapses stages 2+3 \u2014 building this from scratch shows the full pipeline DPO short-circuits."
+}
